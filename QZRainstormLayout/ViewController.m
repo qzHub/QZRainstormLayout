@@ -33,7 +33,7 @@
     layout.rowSpacing       = 5;       // 每一行之间的间距
     layout.sectionInset     = UIEdgeInsetsMake(0, 10, 0, 10);
     [layout setItemHeightBlock:^CGFloat(CGFloat itemHeight, NSIndexPath * _Nonnull indexPath) {
-        return 50 + (60 * (arc4random() % 5) / 6) ;
+        return 50 + (60 * (arc4random() % 35) / 6) ;
     }];
     
     //创建collectionView
@@ -49,7 +49,7 @@
 
 #pragma mark <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return arc4random() % 50;
+    return arc4random() % 100;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
